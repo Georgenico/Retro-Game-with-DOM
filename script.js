@@ -45,7 +45,7 @@ document.querySelector('.check').addEventListener('click', function() {
             score--; 
             document.querySelector('.score').textContent = score;
         } else {
-            document.querySelector('.message').textContent = '💥 You Lost the game!';
+            document.querySelector('.message').textContent = 'Napakatanga naman 😒';
             document.querySelector('.score').textContent = 0;
         }
 
@@ -63,7 +63,7 @@ document.querySelector('.check').addEventListener('click', function() {
 })
 
 document.querySelector('.again').addEventListener('click', function(){
-    score = 20;
+    score = 3;
     secretNumber = Math.trunc(Math.random() *20) + 1;
     document.querySelector('.message').textContent = 'Start Guessing...';
     document.querySelector('.score').textContent = score;
