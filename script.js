@@ -12,7 +12,7 @@ document.querySelector('.guess').value =23;
 console.log(document.querySelector('.guess').value);*/
 
 let secretNumber = Math.trunc(Math.random()*20)+1;
-let score = 20;
+let score = 3;
 let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function() {
@@ -56,7 +56,7 @@ document.querySelector('.check').addEventListener('click', function() {
             score--; 
             document.querySelector('.score').textContent = score;
         } else {
-            document.querySelector('.message').textContent = '💥 You Lost the game!';
+            document.querySelector('.message').textContent = 'Bobo mo naman 😢';
             document.querySelector('.score').textContent = 0;
         }
     } 
