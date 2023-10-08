@@ -12,7 +12,7 @@ document.querySelector('.guess').value =23;
 console.log(document.querySelector('.guess').value);*/
 
 let secretNumber = Math.trunc(Math.random()*20)+1;
-let score = 3;
+let score = 5;
 let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function() {
@@ -35,7 +35,7 @@ document.querySelector('.check').addEventListener('click', function() {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-        //When guess is too high
+        //When the guess is too high
     } 
     
     
@@ -45,25 +45,25 @@ document.querySelector('.check').addEventListener('click', function() {
             score--; 
             document.querySelector('.score').textContent = score;
         } else {
-            document.querySelector('.message').textContent = 'Napakatanga naman 😒';
+            document.querySelector('.message').textContent = '💣 You lost the game';
             document.querySelector('.score').textContent = 0;
         }
 
-        // wWhen is guess is too low
+        // When is guess is too low
     } else if (guess < secretNumber) {
         if (score > 1){
             document.querySelector('.message').textContent = '📉 Too Low!';
             score--; 
             document.querySelector('.score').textContent = score;
         } else {
-            document.querySelector('.message').textContent = 'Bobo mo naman 😢';
+            document.querySelector('.message').textContent = '💣 You lost the game';
             document.querySelector('.score').textContent = 0;
         }
     } 
 })
 
 document.querySelector('.again').addEventListener('click', function(){
-    score = 3;
+    score = 5;
     secretNumber = Math.trunc(Math.random() *20) + 1;
     document.querySelector('.message').textContent = 'Start Guessing...';
     document.querySelector('.score').textContent = score;
